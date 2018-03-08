@@ -1,7 +1,33 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World - im the master!</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<script src="./js/aframe.min.js"></script>
+<!-- include aframe-ar.js -->
+<script src="./js/aframe-ar.js"></script>
+
+
+
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+
+
+<a-scene embedded arjs='sourceType: webcam;'>
+
+		<!-- <a-sphere position="0 0.5 0" radius="0.5" color="#EF2D5E"></a-sphere>
+		<a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" color="#7BC8A4"></a-plane>  -->
+		
+		<a-image position="0 0 0" rotation="90 180 0" height="1" width="1"  src="https://raw.githubusercontent.com/mattGraphics/randomfiles/master/red-dot.png"></a-image>
+		
+		<a-image position="0 0.2 0" rotation="270 0 0" height="1" width="1"  src="https://raw.githubusercontent.com/mattGraphics/randomfiles/master/matt-face.png"></a-image> 
+		
+		<a-image position="0 0.4 0" rotation="270 0 0" height="1" width="1"  src="https://raw.githubusercontent.com/mattGraphics/randomfiles/master/hello-you-text.png"></a-image> 
+		
+		<a-video id="inputVideo" src="https://github.com/jeromeetienne/AR.js/blob/master/aframe/examples/demo-portal-door/videos/aframe-city-360.mp4" width="1" height="1" position="0 0.8 0"></a-video>
+
+		  <a-marker-camera preset='custom' type='pattern' url='https://raw.githubusercontent.com/mattGraphics/randomfiles/master/big-m.patt'></a-marker-camera> 
+		  
+		  
+	</a-scene>
+	
+	
+	
+	
 </body>
 </html>
