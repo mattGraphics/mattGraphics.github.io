@@ -14,7 +14,7 @@ let cnv;
 function setup() {
   cnv = createCanvas(400, 400);
   cnv.position(windowWidth/2-(width/2), windowHeight/2-(height/2), 'fixed');
-  background(50);
+  background(0);
   
   button = createButton('generate');
   button.position(cnv.x+50, cnv.y+50);
