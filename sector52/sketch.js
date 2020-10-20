@@ -21,7 +21,7 @@ function setup() {
   background(0);
   
   button = createButton('generate');
-  button.position(cnv.x+30, cnv.y+30);
+  button.position(cnv.x+30, cnv.y+10);
   button.mousePressed(generate);
   button.addClass('bigB');
   
@@ -43,12 +43,12 @@ function generate()
   place = random(places); 
   crime = random(crimes); 
   
-  text(perp+" in "+place+" committed "+crime, 30, 120, 300,550);
+  text(perp+" in "+place+" committed "+crime, 30, 100, 300,550);
   
 
 }
 
 function windowResized() {
   cnv.position(windowWidth/2-(width/2), windowHeight/2-(height/2), 'fixed');
-  button.position(cnv.x+30, cnv.y+30);
+  button.position(cnv.x+30, cnv.y+10);
 }
