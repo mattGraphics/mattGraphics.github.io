@@ -13,7 +13,7 @@ let cnv;
 
 function setup() {
   cnv = createCanvas(400, 400);
-  cnv.position(width/2, height/2, 'fixed');
+  cnv.position(50, 50, 'fixed');
   background(50);
   
   button = createButton('generate');
