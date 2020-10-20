@@ -13,6 +13,10 @@ let cnv;
 
 function setup() {
   cnv = createCanvas(400, 400);
+  
+  textSize(30);
+  fill(255);
+  
   cnv.position(windowWidth/2-(width/2), windowHeight/2-(height/2), 'fixed');
   background(0);
   
@@ -21,8 +25,7 @@ function setup() {
   button.mousePressed(generate);
   button.addClass('bigB');
   
-  textSize(30);
-  fill(255);
+
   //textAlign(CENTER, CENTER);
   
 }
