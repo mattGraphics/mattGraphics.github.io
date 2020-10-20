@@ -44,3 +44,8 @@ function generate()
   
 
 }
+
+function windowResized() {
+  cnv.position(windowWidth/2-(width/2), windowHeight/2-(height/2), 'fixed');
+  button.position(cnv.x+50, cnv.y+50);
+}
