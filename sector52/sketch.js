@@ -21,7 +21,7 @@ function setup() {
   background(0);
   
   button = createButton('generate');
-  button.position(cnv.x+30, cnv.y+10);
+  button.position(cnv.x+30, cnv.y+20);
   button.mousePressed(generate);
   button.addClass('bigB');
   
@@ -50,5 +50,5 @@ function generate()
 
 function windowResized() {
   cnv.position(windowWidth/2-(width/2), windowHeight/2-(height/2), 'fixed');
-  button.position(cnv.x+30, cnv.y+10);
+  button.position(cnv.x+30, cnv.y+20);
 }
