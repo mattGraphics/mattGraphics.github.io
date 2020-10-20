@@ -12,7 +12,7 @@ let cnv;
 
 
 function setup() {
-  cnv = createCanvas(400, 400);
+  cnv = createCanvas(350, 600);
   
   textSize(30);
   fill(255);
@@ -21,7 +21,7 @@ function setup() {
   background(0);
   
   button = createButton('generate');
-  button.position(cnv.x+50, cnv.y+50);
+  button.position(cnv.x+30, cnv.y+30);
   button.mousePressed(generate);
   button.addClass('bigB');
   
@@ -43,12 +43,12 @@ function generate()
   place = random(places); 
   crime = random(crimes); 
   
-  text(perp+" in "+place+" committed "+crime, 50, 120, 300,300);
+  text(perp+" in "+place+" committed "+crime, 30, 120, 300,550);
   
 
 }
 
 function windowResized() {
   cnv.position(windowWidth/2-(width/2), windowHeight/2-(height/2), 'fixed');
-  button.position(cnv.x+50, cnv.y+50);
+  button.position(cnv.x+30, cnv.y+30);
 }
