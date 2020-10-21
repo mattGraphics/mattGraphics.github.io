@@ -38,7 +38,7 @@ function draw() {
 
 function generate()
 {
-  background(50);
+  background(0);
   report = random(reports);  
   place = random(places); 
   crime = random(crimes); 
