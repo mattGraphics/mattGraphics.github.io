@@ -174,4 +174,21 @@ function draw() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+  //BG '&' CODE
+  // create offscreen graphics buffer
+  graphic = createGraphics(width, height)
+  
+  // type setup offscreen in buffer
+  graphic.textFont(bodyCopy)
+  graphic.textAlign(CENTER, CENTER)
+  graphic.blendMode(SCREEN)
+  graphic.textSize(200)
+  graphic.fill('rgba(255, 0, 0, 0.9)')
+  graphic.text('&', width / 2, height / 2)
+  graphic.textSize(210)
+  graphic.fill('rgba(0, 255, 0, 0.9)')
+  graphic.text('&', width / 2, height / 1.98)
+  graphic.textSize(190)
+  graphic.fill('rgba(0, 0, 255, 0.9)')
+  graphic.text('&', width / 2, height / 2.02)
 }
