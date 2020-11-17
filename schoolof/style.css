@@ -1,0 +1,11 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #3EECAC;
+background-image: linear-gradient(205deg, #3EECAC 0%, #EE74E1 100%);
+}
+canvas {
+  display: block;
+}
+
+
