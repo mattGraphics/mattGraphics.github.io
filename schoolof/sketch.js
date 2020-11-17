@@ -33,7 +33,7 @@ function preload() {
 
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(windowWidth, windowHeight);
   wordHeight = height/leftText.length;
   textFont(bodyCopy);
 
@@ -164,10 +164,14 @@ function draw() {
   
   
   textAlign(CENTER,TOP);
-  fill(238,116,225);
-  textSize(100);
-  text("School of",0,0,width,height);
+  fill(0,50);
+  textSize(120);
+
+  text('school'+'\n'+'of',0,0,width,height);
  
   
-  
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
