@@ -116,13 +116,7 @@ function draw() {
     }
   }
   
-  //BOXES
-  rectMode(CORNER);
-  fill(255,100);
-  rect(0,0,width,height/2-16);
-  rect(0,height/2+56,width,height/2-20);
-  rect(0,height/2-16,10,72);
-  rect(width-10,height/2-16,10,72);
+
   
   
   
@@ -135,7 +129,12 @@ function draw() {
               leftArray[i].yPos += s;
               scalingL = abs(map(leftArray[i].yPos, 0, height, -1,1));
               textSize(txtSize-(txtSize*scalingL));
-              fill(255,255-(255*scalingL));
+              fill(255,100-(255*scalingL));
+              
+              if(scalingL < 0.1){ 
+                fill(255);
+              }
+              
               
               if(leftArray[i].yPos >= height)
                 {
@@ -156,7 +155,11 @@ function draw() {
               rightArray[i].yPos -= s;
               scalingR = abs(map(rightArray[i].yPos, 0, height, -1,1));
               textSize(txtSize-(txtSize*scalingR));
-              fill(255,255-(255*scalingR));
+              fill(255,100-(255*scalingR));
+              
+              if(scalingR < 0.1){ 
+                fill(255);
+              }
               
                if(rightArray[i].yPos < 0)
                 {
