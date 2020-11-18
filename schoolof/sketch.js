@@ -5,6 +5,7 @@ var counterL = 1;
 var newLPos;
 var scalingL;
 
+
 //RIGHT TEXT VARIABLES
 var rightText;
 var rightArray = [];
@@ -33,7 +34,7 @@ function preload() {
 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(800,800);
   wordHeight = height/leftText.length;
   textFont(bodyCopy);
 
@@ -63,13 +64,13 @@ function setup() {
   graphic.textAlign(CENTER, CENTER)
   graphic.blendMode(SCREEN)
   graphic.textSize(200)
-  graphic.fill('rgba(255, 0, 0, 0.9)')
+   graphic.fill('rgba(255,37,37, 0.5)')
   graphic.text('&', width / 2, height / 2)
   graphic.textSize(210)
-  graphic.fill('rgba(0, 255, 0, 0.9)')
+  graphic.fill('rgba(43,255,136, 0.5)')
   graphic.text('&', width / 2, height / 1.98)
   graphic.textSize(190)
-  graphic.fill('rgba(0, 0, 255, 0.9)')
+  graphic.fill('rgba(33,212,253, 0.5)')
   graphic.text('&', width / 2, height / 2.02)
   
   
@@ -77,6 +78,7 @@ function setup() {
 
 function draw() {
   clear();
+  noStroke();
   
  
   
@@ -114,6 +116,13 @@ function draw() {
     }
   }
   
+  //BOXES
+  rectMode(CORNER);
+  fill(255,100);
+  rect(0,0,width,height/2-16);
+  rect(0,height/2+56,width,height/2-20);
+  rect(0,height/2-16,10,72);
+  rect(width-10,height/2-16,10,72);
   
   
   
@@ -160,35 +169,23 @@ function draw() {
             }
   
 
-  sine+=TWO_PI/44.5;
+  sine+=TWO_PI/44.45;
   
   
+  //SCHOOL OF
   textAlign(CENTER,TOP);
-  fill(0,50);
+  fill(217,175,217);
   textSize(120);
 
   text('school'+'\n'+'of',0,0,width,height);
  
   
+  //OUTLINE BOX
+  rectMode(RADIUS);
+  noFill();
+  stroke(0,100);
+  rect(width/2,height/2+20,width/2-10,36);
+  
+  
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  //BG '&' CODE
-  // create offscreen graphics buffer
-  graphic = createGraphics(width, height)
-  
-  // type setup offscreen in buffer
-  graphic.textFont(bodyCopy)
-  graphic.textAlign(CENTER, CENTER)
-  graphic.blendMode(SCREEN)
-  graphic.textSize(200)
-  graphic.fill('rgba(255, 0, 0, 0.9)')
-  graphic.text('&', width / 2, height / 2)
-  graphic.textSize(210)
-  graphic.fill('rgba(0, 255, 0, 0.9)')
-  graphic.text('&', width / 2, height / 1.98)
-  graphic.textSize(190)
-  graphic.fill('rgba(0, 0, 255, 0.9)')
-  graphic.text('&', width / 2, height / 2.02)
-}
