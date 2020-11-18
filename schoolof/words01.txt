@@ -24,7 +24,7 @@ industry
 business
 theory
 practice
-problem sol
+problem solving
 analysis
 networking
 global citizenship
