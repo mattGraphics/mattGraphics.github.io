@@ -186,7 +186,7 @@ function draw() {
   //OUTLINE BOX
   rectMode(RADIUS);
   noFill();
-  stroke(0,100);
+  stroke(255,100);
   rect(width/2,height/2+20,width/2-10,36);
   
   
