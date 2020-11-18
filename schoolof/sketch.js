@@ -15,7 +15,7 @@ var scalingR;
 
 //SHARED VARIABLES
 var wordHeight;
-var txtSize = 30;
+var txtSize = 28;
 var sine = 0.01;
 
 //BG ''&'' CODE
