@@ -16,7 +16,7 @@ var scalingR;
 //SHARED VARIABLES
 var wordHeight;
 var txtSize = 28;
-var sine = 0.01;
+var sine = 0.00;
 var schoolOfFade = 100;
 
 
@@ -24,14 +24,15 @@ var schoolOfFade = 100;
 function preload() {
   leftText = loadStrings('words02.txt');
   rightText = loadStrings('words01.txt');
-  bodyCopy = loadFont('abril.otf');
+  bodyCopy = loadFont('Moderat-Regular.otf');
+  headCopy = loadFont('Fabrik-Bold.otf');
 }
 
 
 function setup() {
   createCanvas(800,800);
   wordHeight = height/leftText.length;
-  textFont(bodyCopy);
+  
 
   //LEFT TEXT
   for(var i=0; i<leftText.length;i++)
@@ -53,16 +54,12 @@ function setup() {
 function draw() {
   clear();
   noStroke();
+  textFont(bodyCopy);
   
   //GREY BOX BEHIND TEXT
   fill(100);
   rect(0,height/2-16,width,100);
   
-  //AMPERSAND
-  fill(255,100);
-  textSize(60);
-  textAlign(CENTER,CENTER);
-  text('&',0,0,width,height);
   
   
   
@@ -78,7 +75,7 @@ function draw() {
               fill(255,0-(255*scalingL));
               
               if(scalingL < 0.1){ 
-                fill(255);
+                fill(255,150);
               }
               
               
@@ -104,7 +101,7 @@ function draw() {
               fill(255,0-(255*scalingR));
               
               if(scalingR < 0.1){ 
-                fill(255);
+                fill(255,150);
               }
               
                if(rightArray[i].yPos < 0)
@@ -118,7 +115,8 @@ function draw() {
             }
   
 
-  sine+=TWO_PI/44.45;
+  sine+=TWO_PI/44.462;
+  //sine+=0.05;
   
   //BOXES
   rectMode(CORNER);
@@ -126,10 +124,11 @@ function draw() {
   noStroke();
   rect(0,0,width,height/2-16);
   rect(0,height/2+56,width,height/2);
-  rect(0,height/2-16,10,72);
-  rect(width-10,height/2-16,10,72);
+  rect(0,height/2-16,100,100);
+  rect(width-100,height/2-16,100,100);
   
   //SCHOOL OF
+  textFont(headCopy);
   textAlign(CENTER,TOP);
   fill(0,schoolOfFade);
   textSize(120);
@@ -139,13 +138,17 @@ function draw() {
       schoolOfFade-=0.2;
     }
 
- 
+ //AMPERSAND
+  fill(255);
+  textSize(60);
+  textAlign(CENTER,CENTER);
+  text('&',0,0,width+10,height+20);
   
-  //OUTLINE BOX
-  rectMode(RADIUS);
-  noFill();
-  stroke(255,100);
-  rect(width/2,height/2+20,width/2-10,36);
+  
+
+  
+  
+  
   
   
 }
