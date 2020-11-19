@@ -24,7 +24,7 @@ var schoolOfFade = 100;
 function preload() {
   leftText = loadStrings('words02.txt');
   rightText = loadStrings('words01.txt');
-  bodyCopy = loadFont('Moderat-Regular.otf');
+  bodyCopy = loadFont('abril.otf');
   headCopy = loadFont('Fabrik-Bold.otf');
 }
 
@@ -54,7 +54,7 @@ function setup() {
 function draw() {
   clear();
   noStroke();
-  textFont(bodyCopy);
+  textFont(headCopy);
   
   //GREY BOX BEHIND TEXT
   fill(100);
@@ -75,7 +75,7 @@ function draw() {
               fill(255,0-(255*scalingL));
               
               if(scalingL < 0.1){ 
-                fill(255,150);
+                fill(255);
               }
               
               
@@ -101,7 +101,7 @@ function draw() {
               fill(255,0-(255*scalingR));
               
               if(scalingR < 0.1){ 
-                fill(255,150);
+                fill(255);
               }
               
                if(rightArray[i].yPos < 0)
@@ -128,7 +128,6 @@ function draw() {
   rect(width-100,height/2-16,100,100);
   
   //SCHOOL OF
-  textFont(headCopy);
   textAlign(CENTER,TOP);
   fill(0,schoolOfFade);
   textSize(120);
@@ -139,10 +138,11 @@ function draw() {
     }
 
  //AMPERSAND
-  fill(255);
+  fill(255,150);
   textSize(60);
+  textFont(bodyCopy);
   textAlign(CENTER,CENTER);
-  text('&',0,0,width+10,height+20);
+  text('&',0,0,width,height);
   
   
 
