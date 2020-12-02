@@ -1,0 +1,23 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height:100%;
+  background-color: #FFF;
+ /* background-image: linear-gradient(243deg, #3EECAC 0%, #EE74E1 100%); */
+ 
+}
+
+#container{
+
+
+}
+
+
+canvas {
+  display: block;
+  margin: auto;
+}
+
+
+
+
