@@ -15,7 +15,6 @@ var rightTextCount = 0;
 function preload() {
   leftText = loadStrings('words02.txt');
   rightText = loadStrings('words01.txt');
-  bodyCopy = loadFont('abril.otf');
   headCopy = loadFont('Fabrik-Bold.otf');
 }
 
