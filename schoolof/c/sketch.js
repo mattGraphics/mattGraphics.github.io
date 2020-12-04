@@ -9,12 +9,15 @@ var rightPos;
 var speed = 5;
 let leftC;
 let rightC;
+let mainTextFade = 254.5;
+let mainTextCount = -0.5;
 
 var rightTextCount = 0;
 
 function preload() {
   leftText = loadStrings('words02.txt');
   rightText = loadStrings('words01.txt');
+  bodyCopy = loadFont('abril.otf');
   headCopy = loadFont('Fabrik-Bold.otf');
 }
 
@@ -54,7 +57,7 @@ function draw() {
           }
   else{
      if(leftPos < 0.1 && leftPos > -0.1){
-       if((leftText[leftTextCount] === 'Art' && rightText[rightTextCount] === 'Design') || (leftText[leftTextCount] === 'Here' && rightText[rightTextCount] === 'Now') )
+       if((leftText[leftTextCount] === 'art' && rightText[rightTextCount] === 'design') || (leftText[leftTextCount] === 'here' && rightText[rightTextCount] === 'now') )
          {
             pauseTheWords(millis()+3000);
          }
@@ -99,9 +102,8 @@ function draw() {
  
 
   //rectangles
-  noFill();
-  stroke(0);
-  rect(-width/2+20,-20,width-40,100);
+  
+  
   noStroke();
   fill(255);
   rect(-width/2,-height/2,width,height/2-20);
@@ -111,9 +113,22 @@ function draw() {
   text('&',0,2);
   textSize(50);
   textAlign(CENTER);
- text('School of',-width/2+20,-90,width,height);
+  fill(0, mainTextFade);
+ text('Cardiff School of',-width/2+15,-90,width,height);
   
+  if(mainTextFade <= -50)
+    {
+      mainTextCount *= -1;
+      mainTextFade = -49.5;
+    }
+  else if(mainTextFade >= 255){
+      mainTextFade = 254.5;
+      mainTextCount *= -1;
+  }
+
   
+  mainTextFade += mainTextCount;
+
 }
 
 
