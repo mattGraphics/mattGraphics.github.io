@@ -6,7 +6,7 @@ var leftPos;
 let inPosition = false;
 var leftTextCount = 0;
 var rightPos;
-var speed = 5;
+var speed = 3;
 let leftC;
 let rightC;
 let mainTextFade = 254.5;
@@ -22,7 +22,7 @@ function preload() {
 
 
 function setup() {
-  createCanvas(800,800);
+  createCanvas(800,700);
   textFont(headCopy);
   leftPos = -100;
   rightPos = 100;
@@ -106,9 +106,15 @@ function draw() {
   
   
   noStroke();
+  
+  fill(255);
+  rect(-width/2,-130,width,100);
+  
+  
   fill(104,180,90);
-  rect(-width/2,-height/2,width,height/2-20);
+  rect(-width/2,-height/2,width,height/2-100);
   rect(-width/2,80,width,height/2);
+  
   
    fill(0);
   text('&',0,2);
