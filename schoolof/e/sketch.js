@@ -115,7 +115,7 @@ function draw() {
   textSize(50);
   textAlign(CENTER);
   fill(0, mainTextFade);
- text('Cardiff School of',-width/2+15,-90,width,height);
+ text('Cardiff School of',-width/2+15,-90,width,60);
   
   if(mainTextFade <= -50)
     {
