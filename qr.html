@@ -11,7 +11,7 @@
 	
 	<!-- This is to load the A-frame extras, that contain the required components that are used to show the animations -->
 	<!-- of the 3D model of the robot -->
-	<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>	
+	
 	
 	<!-- This is a hack because at the time of writing there are some distortions in the provided visuals until the  -->
 	<!-- system receives a resize event. The resize event must be triggered when everything has been loaded and the  -->
@@ -34,12 +34,7 @@
 	<!-- depending on your needs. For now just stick with these ones -->
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
 		 
-		 <!-- Here we load the asset of the robot, pointing to its file. A-frame works with GLTF and GLB models. -->
-		 <!-- We define a name for this asset, that is "robot" -->
-		 <a-assets>
-		    <!-- BrainStem model created by Keith Hunter and owned by Smith Micro Software, Inc. Exported from Poser and made available under clause (g) of “Legitimate Uses” as defined by the Poser Pro EULA. -->
-            <a-asset-item id="robot" src="https://skarredghost.com/AR/BrainStem.glb"></a-asset-item>
-         </a-assets>
+		
 	   
 		 <!-- Defines the marker that we are going to use. Notice that we are not providing the image file, but the  -->
 		 <!-- "compiled" .patt file that we got from the online tool. the marker MUST BE ACCESSIBLE VIA HTTPS -->
